@@ -1,9 +1,11 @@
 \documentclass[a4paper]{article}
-%\usepackage[T1]{fontenc}
 %\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
 \usepackage{gentium}
+\usepackage[hidelinks]{hyperref} % Add this in the preamble
 
-\usepackage[top=.5in, bottom=.5in, left=.5in, right=.5in]{geometry}
+
+\usepackage[top=.4in, bottom=0.7in, left=.4in, right=.4in]{geometry}
 \makeatletter
 \@ifundefined{KOMAClassName}{
   \IfFileExists{parskip.sty}{%
@@ -50,14 +52,11 @@
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0176}}@{}}
 \textbf{\LARGE{Mina Albert Saeed Hermina}}
 \vspace{1pt} \\ 
-Phone: +20 1272937424
+\href{mailto:mina.albert.saeed@gmail.com}{mina.albert.saeed@gmail.com} \\
 
-mina.albert.saeed@gmail.com
+\href{https://www.linkedin.com/in/minaalbert}{linkedin.com/in/minaalbert} \\
 
-linkedin.com/in/minaalbert
-
-github.com/minahermina
-
+\href{https://github.com/minahermina}{github.com/minahermina} \\
 Egypt & \\
 \end{longtable}
 \vspace{-10pt}
@@ -71,8 +70,8 @@ Egypt & \\
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \toprule
-\vspace{0pt}
-    A motivated computer science student specializing in IT, with a strong passion for GNU/Linux, networks, and operating systems. Enthusiastic about their evolution from inception to the present, I am eager to apply my knowledge in real-world projects. Seeking an internship in \textbf{Linux/Unix Systems Engineering or Programming} to contribute my skills while gaining hands-on experience.
+\addlinespace[7pt] % Adds extra vertical space after the top rule
+A motivated computer science student specializing in IT, with a strong passion for GNU/Linux, networks, and operating systems. Enthusiastic about their evolution from inception to the present, I am eager to apply my knowledge in real-world projects. Seeking an internship in \textbf{Linux/Unix Systems Engineering or Programming} to contribute my skills while gaining hands-on experience.
 \end{longtable}
 \vspace{-8pt}
 
@@ -85,18 +84,17 @@ Egypt & \\
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{} }
 \toprule\noalign{}
-\vspace{0pt}
+\vspace{-7pt}
     \begin{minipage}[t]{\linewidth}\raggedright
         \textbf{IEEE Cairo University Student Branch}
-        \hspace{27em}\textbf{March 2024 -- June 2024} \\
+        \hspace{29em}\textbf{March 2024 -- June 2024} \\
         Networks Instructor
         \vspace{.05em}
         \begin{itemize}
             \item
               Contributing to the development of technical content for the committee
-              sessions and instructed real sessions for network committee members
-        \end{itemize}
-    \end{minipage} \\
+sessions and instructing real sessions for network committee members
+\end{itemize} \end{minipage} 
 \end{longtable}
 \vspace{-10pt}
 
@@ -109,7 +107,7 @@ Egypt & \\
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \toprule\noalign{}
-\vspace{0pt}
+\vspace{-7pt}
 \begin{minipage}[t]{\linewidth}\raggedright
     \textbf{Technical skills \& TOOLS:}
     \begin{itemize}
@@ -140,29 +138,19 @@ Egypt & \\
 % Projects
 % -----------------------------------
 \textbf{PROJECTS}
-\vspace{-8pt}
-\nopagebreak[4]
+\vspace{-12pt}
+
+\rule{1\linewidth}{0.9pt} % Adjust width and thickness of the underline
 \begin{longtable}[]{@{}
     >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7}}
     >{\raggedleft\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3}}@{}}
-\toprule
-\vspace{0pt}
+ % Adjust for a shorter rule
+
 \endhead
-
-\textbf{Linux Kernel With lockdep} & \textbf{April 2024} \\
+\addlinespace[-5pt]
+\textbf{imglib} & \textbf{November 2024 -- January 2025} \\
 \multicolumn{2}{p{\linewidth}}{
-\vspace{-6pt}
-        \begin{itemize}
-            \item
-              Configured and built the Linux kernel to enable lockdep module which
-                helps in debugging \newline{} deadlocks in kernel space, replacing the new
-              custom kernel into my system and using it.
-        \end{itemize}
-}\\[-5pt]
-
-\textbf{imglib} & \textbf{November 2024 -- December 2024} \\
-\multicolumn{2}{p{\linewidth}}{
-\vspace{-6pt}
+\vspace{-7pt}
     \begin{itemize}
         \item 
             Developed a lightweight, portable C library for image manipulation on Unix-like systems.
@@ -174,9 +162,20 @@ Egypt & \\
     \end{itemize}
 }\\[-5pt]
 
+\textbf{Linux Kernel With lockdep} & \textbf{April 2024} \\
+\multicolumn{2}{p{\linewidth}}{
+\vspace{-5pt}
+        \begin{itemize}
+            \item
+              Configured and built the Linux kernel to enable lockdep module which
+                helps in debugging \newline{} deadlocks in kernel space, replacing the new
+              custom kernel into my system and using it.
+        \end{itemize}
+}\\[-5pt]
+
 \textbf{POSIX Compliant Shell scripts Creation} & \textbf{September 2023 - Current} \\
 \multicolumn{2}{p{\linewidth}}{
-\vspace{-6pt}
+\vspace{-5pt}
     \begin{itemize}
         \item
           Building POSIX-compliant shell scripts to automate daily tasks on my
@@ -188,7 +187,7 @@ Egypt & \\
 
     \textbf{Higher Studies Systems} & \textbf{May 2023 -- July 2023} \\
 \multicolumn{2}{p{\linewidth}}{%
-\vspace{-6pt}
+\vspace{-5pt}
     \begin{itemize}
         \item
           Building a user-friendly website using \textbf{Django} framework for
@@ -211,11 +210,11 @@ Egypt & \\
 \begin{longtable}[]{@{}
     >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \toprule\noalign{}
-\vspace{0pt}
+\vspace{-7pt}
 \begin{minipage}[t]{\linewidth}\raggedright
 Faculty of Computers and Artificial Intelligence, IT Department, Cairo
     university.
-\hspace{10em}\textbf{October 2024 -- Current}
+\hspace{11.2em}\textbf{October 2024 -- Current}
 
     \begin{itemize}
         \item
@@ -234,17 +233,18 @@ Faculty of Computers and Artificial Intelligence, IT Department, Cairo
 \begin{longtable}[]{@{}
     >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
 \toprule\noalign{}
-\vspace{0pt}
+\vspace{-7pt}
 \begin{minipage}[t]{\linewidth}\raggedright
     \begin{itemize}
         \item
             CCNA: Introduction to Networks
-            \hspace{28em}\textbf{July 2024 -- August 2024}
+            \hspace{29.7em}\textbf{July 2024 -- August 2024}
         \item
             CCNA: Switching, Routing, and Wireless Essentials
-            \hspace{20.3em}\textbf{July 2024 -- August 2024}
+            \hspace{22em}\textbf{July 2024 -- August 2024}
         \end{itemize}
 \end{minipage} \\
 \end{longtable}
 
 \end{document}
+
