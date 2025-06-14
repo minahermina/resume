@@ -1,0 +1,248 @@
+\documentclass[a4paper]{article}
+%\usepackage{mathptmx}
+\usepackage{fontenc}
+\usepackage{crimson}
+\usepackage[hidelinks]{hyperref} % Add this in the preamble
+
+
+\usepackage[top=.4in, bottom=0.7in, left=.4in, right=.4in]{geometry}
+\makeatletter
+\@ifundefined{KOMAClassName}{
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{
+    \KOMAoptions{parskip=half}% if KOMA class
+}
+
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{calc}
+\makeatletter
+
+\IfFileExists{footnotehyper.sty}{
+    \usepackage{footnotehyper }
+}{
+    \usepackage{footnote}
+}
+
+\makesavenoteenv{longtable}
+\usepackage{bookmark}
+
+% Document metadata
+\hypersetup{
+    hidelinks,
+    pdftitle={Mina Hermina's Resume},
+    pdfauthor={Mina Hermina},
+    pdfsubject={Resume},
+    pdfcreator={LaTeX},
+    pdfproducer={pdfTeX},
+    pdfkeywords={resume, CV}
+}
+
+\begin{document}
+
+% -----------------------------------
+% Info section
+% -----------------------------------
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.9824}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.0176}}@{}}
+\textbf{\LARGE{Mina Albert Saeed Hermina}}
+\vspace{1pt} \\ 
+\href{mailto:mina.albert.saeed@gmail.com}{mina.albert.saeed@gmail.com} \\
+
+\href{https://www.linkedin.com/in/minaalbert}{linkedin.com/in/minaalbert} \\
+
+\href{https://github.com/minahermina}{github.com/minahermina} \\
+Egypt & \\
+\end{longtable}
+\vspace{-10pt}
+
+% -----------------------------------
+% Summary section
+% -----------------------------------
+\textbf{SUMMARY}
+\vspace{-8pt}
+\nopagebreak[4]
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule
+\addlinespace[7pt] % Adds extra vertical space after the top rule
+A motivated computer science student specializing in IT, with a strong passion for GNU/Linux, networks, and operating systems. Enthusiastic about their evolution from inception to the present, I am eager to apply my knowledge in real-world projects. Seeking an internship in \textbf{Linux/Unix Systems Engineering or Programming} to contribute my skills while gaining hands-on experience.
+\end{longtable}
+\vspace{-8pt}
+
+% -----------------------------------
+% Extracurriculars section
+% -----------------------------------
+\textbf{EXTRACURRICULARS}
+\vspace{-7pt}
+\nopagebreak[4]
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{} }
+\toprule\noalign{}
+\vspace{-7pt}
+    \begin{minipage}[t]{\linewidth}\raggedright
+        \textbf{IEEE Cairo University Student Branch}
+        \hspace{27.6em}\textbf{March 2024 -- June 2024} \\
+        Networks Instructor
+        \vspace{.05em}
+        \begin{itemize}
+            \item
+              Contributing to the development of technical content for the committee
+sessions and instructing real sessions for network committee members
+\end{itemize} \end{minipage} 
+\end{longtable}
+\vspace{-10pt}
+
+% -----------------------------------
+% SKILLS \& LANGUAGES
+% -----------------------------------
+\textbf{SKILLS \& LANGUAGES}
+\vspace{-8pt}
+\nopagebreak[4]
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\vspace{-7pt}
+\begin{minipage}[t]{\linewidth}\raggedright
+    \textbf{Technical skills \& TOOLS:}
+    \begin{itemize}
+        \item
+          C, C++, Python, Java, OOP, and Data structures
+        \item
+         GNU/Linux, Bash, and docker
+        \item
+          Basic understanding of TCP/IP Protocols Suite
+        \item
+          Git, GitHub, vim, tmux
+    \end{itemize}
+
+    \textbf{Languages:}
+    \begin{itemize}
+        \item
+          Arabic: Native proficiency
+        \item
+          English: Intermediate proficiency (B1)
+    \end{itemize}
+\end{minipage} \\
+\end{longtable}
+\vspace{-10pt}
+
+% -----------------------------------
+% Projects
+% -----------------------------------
+\textbf{PROJECTS}
+\vspace{-12pt}
+
+\rule{1\linewidth}{0.9pt} % Adjust width and thickness of the underline
+\begin{longtable}[]{@{}
+    >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7}}
+    >{\raggedleft\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3}}@{}}
+ % Adjust for a shorter rule
+
+\endhead
+\addlinespace[-5pt]
+
+
+   \textbf{Arena Allocator} & \textbf{February 2025 -- March 2025} \\
+\multicolumn{2}{p{\linewidth}}{%
+\vspace{-5pt}
+    \begin{itemize}
+        \item
+          Implemented a custom single-header region-based memory allocator in C using \textbf{mmap},  following \newline{} the \textbf{stb-style headers}.
+        \item
+          Designed an efficient memory management system with features including \textbf{page-aligned} allocations, \newline{} and memory usage tracking.
+    \end{itemize}
+}\\[-5pt]
+    
+\textbf{imglib} & \textbf{November 2024 -- January 2025} \\
+\multicolumn{2}{p{\linewidth}}{
+\vspace{-7pt}
+    \begin{itemize}
+        \item 
+            Developed a lightweight, portable C library for image manipulation on Unix-like systems.
+        \item 
+            Followed the Suckless C coding style and wrote a portable Makefile, avoiding GNU-specific extensions.
+
+        \item 
+            Implemented efficient pixel access using stride-based indexing for performance optimization.
+    \end{itemize}
+}\\[-5pt]
+
+\textbf{Linux Kernel With lockdep} & \textbf{April 2024} \\
+\multicolumn{2}{p{\linewidth}}{
+\vspace{-5pt}
+        \begin{itemize}
+            \item
+              Configured and built the Linux kernel to enable lockdep module which
+                helps in debugging \newline{} deadlocks in kernel space, replacing the new
+              custom kernel into my system and using it.
+        \end{itemize}
+}\\[-5pt]
+
+\textbf{POSIX Compliant Shell scripts Creation} & \textbf{September 2023 - September 2024} \\
+\multicolumn{2}{p{\linewidth}}{
+\vspace{-5pt}
+    \begin{itemize}
+        \item
+          Building POSIX-compliant shell scripts to automate daily tasks on my
+            system like spinning up a \newline{} virtual machine, unarchiving archive files
+          and screen casting.
+    \end{itemize}
+}\\[-5pt]
+
+\end{longtable}
+\vspace{-12pt}
+
+% -----------------------------------
+% EDUCATION
+% -----------------------------------
+\textbf{EDUCATION}
+\vspace{-8pt}
+\begin{longtable}[]{@{}
+    >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\vspace{-7pt}
+\begin{minipage}[t]{\linewidth}\raggedright
+Faculty of Computers and Artificial Intelligence, IT Department, Cairo
+    university.
+\hspace{11.8em}\textbf{October 2021 -- Current}
+
+    \begin{itemize}
+        \item
+          Bachelor's Degree in Information Technology
+        \end{itemize}
+\end{minipage} \\
+\end{longtable}
+
+% \newpage
+
+% -----------------------------------
+% CERTIFICATES
+% -----------------------------------
+\textbf{CERTIFICATES}
+\vspace{-8pt}
+\begin{longtable}[]{@{}
+    >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\vspace{-7pt}
+\begin{minipage}[t]{\linewidth}\raggedright
+    \begin{itemize}
+        \item
+            CCNA: Introduction to Networks
+            \hspace{28.2em}\textbf{July 2024 -- August 2024}
+        \item
+            CCNA: Switching, Routing, and Wireless Essentials
+            \hspace{21.6em}\textbf{July 2024 -- August 2024}
+        \end{itemize}
+\end{minipage} \\
+\end{longtable}
+
+\end{document}
+
+
+
