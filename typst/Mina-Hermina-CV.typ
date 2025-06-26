@@ -29,6 +29,8 @@
   date: datetime.today(),
 )
 
+#show heading.where(level: 3): set text(size: 11pt)
+
 #let def_section(title, content) = {
     heading(level:2)[#title]
     line(length: 100%, stroke: 0.8pt)
@@ -39,14 +41,19 @@
 
 #let list-padding = 1.5em
 
-#let def_project(name, date, content) = {
+#let def_project(name, url: none, date, content) = {
     table(
         columns: (1fr, auto),
         inset: 0pt,
         stroke: none,
         align: (left, right),
-        [*#name*], [*#date*]
-    )
+        [#heading(level: 3, 
+            if url != none {
+                link(url)[#name]
+            } else {
+                name
+            })
+        ], [*#date*])
 
     pad(left: list-padding)[
         #content
@@ -106,25 +113,35 @@
 ])
 
 #def_section("PROJECTS", [
-    #def_project(heading(level: 3, "Arena Allocator"), "February 2025 – March 2025", [
+
+    #def_project("Arena Allocator",
+        url: "https://github.com/minahermina/arena-allocator-in-C.git", "February 2025 – March 2025", 
+        [
         - Implemented a custom single-header region-based memory allocator in C using *mmap*, following 
           \ the *stb-style headers*.
         - Designed an efficient memory management system with features including *page-aligned* allocations, 
           \ and memory usage tracking.
     ])
 
-    #def_project(heading(level:3, "imglib"), "November 2024 -- January 2025", [
+    #def_project("imglib",
+        url: "https://github.com/minahermina/imglib.git", "November 2024 -- January 2025", [
         - Developed a lightweight, portable C library for image manipulation on Unix-like systems.
         - Followed the Suckless C coding style and wrote a portable Makefile, avoiding GNU-specific extensions.
         - Implemented efficient pixel access using stride-based indexing for performance optimization.
-    ])
+        ]
+    )
 
-    #def_project(heading(level:3, "Linux Kernel With lockdep"), "April 2024", [
+    #def_project("Linux Kernel With lockdep", 
+        url: "https://github.com/minahermina/Kernel-Config-with-lockdep-module", "April 2024", 
+        [
         - Configured and built the Linux kernel to enable lockdep module which helps in debugging 
           \ deadlocks  in kernel space, replacing the new custom kernel into my system and using it.
     ])
 
-    #def_project(heading(level:3, "POSIX Compliant Shell Scripts Creation"), "September 2023 - September 2024", [
+    #def_project("POSIX Compliant Shell Scripts Creation",
+        url: "https://gitlab.com/minahermina/dotfiles/-/tree/main/.local/scripts?ref_type=heads",
+        "September 2023 - September 2024", 
+        [
         - Building POSIX-compliant shell scripts to automate daily tasks on my system like spinning up 
           \ a virtual machine, unarchiving archive files and screen casting.
     ])
