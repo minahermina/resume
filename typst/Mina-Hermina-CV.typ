@@ -151,13 +151,6 @@
           \ deadlocks  in kernel space, replacing the new custom kernel into my system and using it.
     ])
 
-    #def_project("POSIX Compliant Shell Scripts Creation",
-        url: "https://gitlab.com/minahermina/dotfiles/-/tree/main/.local/scripts?ref_type=heads",
-        date: "September 2023 - September 2024", 
-        [
-        - Building POSIX-compliant shell scripts to automate daily tasks on my system like spinning up 
-          \ a virtual machine, unarchiving archive files and screen casting.
-    ])
 ])
 
 #def_section("EDUCATION", [
