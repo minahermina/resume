@@ -1,6 +1,11 @@
 // vim: set ts=4 sw=4 et:
 // vim: filetype=typst
 
+#show heading: it => [
+  #set block(above: 10pt, below: 5pt)
+  #it
+]
+
 #set page(
     paper: "a4",
     margin: (top: 0.4in, bottom: 0.4in, left: 0.4in, right: 0.4in),
@@ -31,6 +36,7 @@
     line(length: 100%, stroke: 0.8pt)
     v(2pt)
     content
+    v(5pt)
 }
 
 #let list-padding = 1.5em
