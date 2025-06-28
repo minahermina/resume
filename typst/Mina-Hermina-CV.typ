@@ -1,11 +1,6 @@
 // vim: set ts=4 sw=4 et:
 // vim: filetype=typst
 
-#show heading: it => [
-  #set block(above: 10pt, below: 5pt)
-  #it
-]
-
 #set page(
     paper: "a4",
     margin: (top: 0.4in, bottom: 0.4in, left: 0.4in, right: 0.4in),
@@ -32,11 +27,10 @@
 #show heading.where(level: 3): set text(size: 11pt)
 
 #let def_section(title, content) = {
-    heading(level:2)[#title]
+    heading(level: 2)[#title]
     line(length: 100%, stroke: 0.8pt)
     v(2pt)
     content
-    v(5pt)
 }
 
 #let list-padding = 1.5em
@@ -97,7 +91,7 @@
 ])
 
 #def_section("SKILLS & LANGUAGES", [
-    === *Technical skills & TOOLS:* \
+    #text(size: 11pt)[*Technical skills & TOOLS:*]
     #pad(left: list-padding)[
         • C, C++, Python, Java, OOP, and Data structures \
         • GNU/Linux, Bash, and docker \ 
@@ -105,7 +99,7 @@
         • Git, GitHub, vim, tmux \
     ]
 
-    === *Languages:*
+    #text(size: 11pt)[*Languages:*]
     #pad(left: list-padding)[
         - Arabic: Native proficiency
         - English: Intermediate proficiency (B1)
