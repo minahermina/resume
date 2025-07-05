@@ -128,7 +128,7 @@
         url: "https://github.com/minahermina/arena-allocator-in-C.git", 
         date: "February 2025 – March 2025", 
         [
-        - Implemented a custom single-header region-based memory allocator in C using *mmap*, following 
+        - Implemented a custom single-header *thread safe* region-based memory allocator in C using *mmap*, following 
           \ the *stb-style headers*.
         - Designed an efficient memory management system with features including *page-aligned* allocations, 
           \ and memory usage tracking.
