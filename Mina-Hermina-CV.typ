@@ -41,7 +41,7 @@
 
 #let list-padding = 1.5em
 
-#let def_project(name, url: none, date: none, content) = {
+#let def_project(name, languages: none, url: none, date: none, content) = {
     table(
         columns: (1fr, auto),
         inset: 0pt,
@@ -52,7 +52,7 @@
                 link(url)[#name]
             } else {
                 name
-            })
+            }) #text(rgb(64, 64, 64), style: "italic")[#languages]
         ], [*#date*])
 
     pad(left: list-padding)[
