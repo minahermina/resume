@@ -97,7 +97,7 @@
 ])
 
 #def_section("SKILLS & LANGUAGES", [
-    #text(size: 11pt)[*Technical skills & TOOLS:*]
+    #text(size: 11pt)[*Technical skills & Tools:*]
     #pad(left: list-padding)[
         • C, C++, Python, Java, OOP, and Data structures \
         • GNU/Linux, Bash, and docker \ 
@@ -136,7 +136,7 @@
 
     #def_project("imglib",
         url: "https://github.com/minahermina/imglib.git", 
-        date: "November 2024 -- January 2025", [
+        date: "November 2024 - January 2025", [
         - Developed a lightweight, portable C library for image manipulation on Unix-like systems.
         - Followed the Suckless C coding style and wrote a portable Makefile, avoiding GNU-specific extensions.
         - Implemented efficient pixel access using stride-based indexing for performance optimization.
@@ -159,8 +159,8 @@
         inset: 0pt,
         stroke: none,
         align: (left, right),
-        [Faculty of Computers and Artificial Intelligence, IT Department, Cairo university.],
-        [*October 2021 -- Current*]
+        [Faculty of Computers and Artificial Intelligence at Cairo university.],
+        [*October 2021 - Current*]
     )
     #pad(left: list-padding)[
         - Bachelor's Degree in Information Technology
@@ -175,5 +175,3 @@
     ]
 
 ])
-
-// ---------------------------------------------------------------
