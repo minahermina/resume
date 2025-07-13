@@ -74,10 +74,10 @@
 ]
 
 #def_section("SUMMARY", [
-    A motivated computer science student specializing in IT, with a strong passion for GNU/Linux,
-    networks, and operating systems. Enthusiastic about their evolution from inception to the present,
-    I am eager to apply my knowledge in real-world projects. Seeking an internship in *Linux/Unix Systems Engineering or Programming* 
-    to contribute my skills while gaining hands-on experience.
+    I am senior Computer Science student specializing in IT, with a strong passion for GNU/Linux,
+    Unix systems, and Systems Programming. I am enthusiastic about their evolution from inception to the present.
+    I am seeking an internship in *Linux/Unix Systems Engineering or Programming* 
+    to contribute my skills while gaining hands-on experience in read-world projects.
 ])
 
 #def_section("EXTRACURRICULARS",[
@@ -160,7 +160,7 @@
         stroke: none,
         align: (left, right),
         [Faculty of Computers and Artificial Intelligence at Cairo university.],
-        [*October 2021 - Current*]
+        [*October 2021 - Present*]
     )
     #pad(left: list-padding)[
         - Bachelor's Degree in Information Technology
