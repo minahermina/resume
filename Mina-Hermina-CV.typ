@@ -102,7 +102,7 @@
         • C, C++, Python, Java, OOP, and Data structures \
         • GNU/Linux, Bash, and docker \ 
         • Basic understanding of TCP/IP Protocols Suite \ 
-        • Git, GitHub, vim, tmux \
+        • Git, GitHub, vim, and tmux \
     ]
 
     #text(size: 11pt)[*Languages:*]
@@ -139,7 +139,7 @@
         date: "November 2024 - January 2025", [
         - Developed a lightweight, portable C library for image manipulation on Unix-like systems.
         - Followed the Suckless C coding style and wrote a portable Makefile, avoiding GNU-specific extensions.
-        - Implemented efficient pixel access using stride-based indexing for performance optimization.
+        - Implemented robust error handling system inspired by *ffmpeg* and stride-based indexing for efficient pixel access.
         ]
     )
 
