@@ -74,8 +74,8 @@
 ]
 
 #def_section("SUMMARY", [
-    I am senior Computer Science student specializing in IT, with a strong passion for GNU/Linux,
-    Unix systems, and Systems Programming. I am enthusiastic about their evolution from inception to the present.
+    I am a senior Computer Science student specializing in IT, with a strong passion for GNU/Linux, Unix systems,
+    and Systems Programming, and a deep interest in their evolution from inception to the present.
     I am seeking an internship in *Linux/Unix Systems Engineering or Programming* 
     to contribute my skills while gaining hands-on experience in read-world projects.
 ])
