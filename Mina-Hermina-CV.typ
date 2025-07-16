@@ -6,10 +6,12 @@
   #it
 ]
 
+#show heading.where(level: 3): set text(size: 11pt)
+#show link: underline
+
 #set page(
     paper: "a4",
     margin: (top: 0.4in, bottom: 0.4in, left: 0.4in, right: 0.4in),
-    numbering: "1"
 )
 
 #set text(
@@ -29,7 +31,6 @@
   date: datetime.today(),
 )
 
-#show heading.where(level: 3): set text(size: 11pt)
 
 #let def_section(title, content) = {
     heading(level: 2)[#title]
@@ -39,7 +40,10 @@
     v(5pt)
 }
 
-#let list-padding = 1.5em
+// Left padding of list items (bullet points)
+#let list_padding = 1.5em
+// Vertical margin between sections
+#let vert_margin = 8pt
 
 #let def_project(name, languages: none, url: none, date: none, content) = {
     table(
@@ -55,23 +59,34 @@
             }) #text(rgb(64, 64, 64), style: "italic")[#languages]
         ], [*#date*])
 
-    pad(left: list-padding)[
+    pad(left: list_padding)[
         #content
     ]
-
-    v(5pt)
+    v(vert_margin)
 }
 
-// ---------------------------------------------------------------
+// Edit this contact_info map don't edit the Header code itself!!
+#let contact_info = (
+    name:     "Mina Albert Saeed Hermina",
+    mail:     "mina.albert.saeed@gmail.com",
+    linkedin: "minaalbert",
+    github:   "minahermina",
+    country:  "Egypt",
+)
+
+#let def_header() = {
+    text(size: 17pt, weight: "bold")[#contact_info.name]
+    align(left)[
+        #link("mailto:" + contact_info.mail)[#contact_info.mail] \
+        #link("https://www.linkedin.com/in/" + contact_info.linkedin)[linkedin.com/in/#contact_info.linkedin] \
+        #link("https://github.com/" + contact_info.github)[github.com/in/#contact_info.github] \
+        #contact_info.country
+        #v(vert_margin)
+    ]
+}
+
 // Header with name and contact info
-#text(size: 17pt, weight: "bold")[Mina Albert Saeed Hermina] \
-#align(left)[
-    #link("mailto:mina.albert.saeed@gmail.com")[mina.albert.saeed\@gmail.com] \
-    #link("https://www.linkedin.com/in/minaalbert")[linkedin.com/in/minaalbert] \
-    #link("https://github.com/minahermina")[github.com/minahermina] \
-    Egypt
-    #v(8pt)
-]
+#def_header()
 
 #def_section("SUMMARY", [
     I am a senior Computer Science student specializing in IT, with a strong passion for GNU/Linux, Unix systems,
@@ -90,7 +105,7 @@
         [*March 2024 -- June 2024*]
     )
     Networks Instructor
-    #pad(left: list-padding)[
+    #pad(left: list_padding)[
         - Contributing to the development of technical content for the committee sessions and 
           \ instructing real sessions for network committee members
     ]
@@ -98,7 +113,7 @@
 
 #def_section("SKILLS & LANGUAGES", [
     #text(size: 11pt)[*Technical skills & Tools:*]
-    #pad(left: list-padding)[
+    #pad(left: list_padding)[
         • C, C++, Python, Java, OOP, and Data structures \
         • GNU/Linux, Bash, and docker \ 
         • Basic understanding of TCP/IP Protocols Suite \ 
@@ -106,7 +121,7 @@
     ]
 
     #text(size: 11pt)[*Languages:*]
-    #pad(left: list-padding)[
+    #pad(left: list_padding)[
         - Arabic: Native proficiency
         - English: Intermediate proficiency (B1)
     ]
@@ -162,14 +177,14 @@
         [Faculty of Computers and Artificial Intelligence at Cairo university.],
         [*October 2021 - Present*]
     )
-    #pad(left: list-padding)[
+    #pad(left: list_padding)[
         - Bachelor's Degree in Information Technology
     ]
 
 ])
 
 #def_section("CERTIFICATES", [
-    #pad(left: list-padding)[
+    #pad(left: list_padding)[
         - CCNA: Introduction to Networks #h(1fr) *July 2024 -- August 2024*
         - CCNA: Switching, Routing, and Wireless Essentials #h(1fr) *July 2024 -- August 2024*
     ]
