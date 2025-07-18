@@ -134,7 +134,7 @@
         date: "April 2025 – June 2025", 
         [
         - Developed a C99 arbitrary-precision arithmetic library for cryptographic applications,  with 
-          \ architecture-dependent 32/64-bit word representation using arean allocation for memory management.
+          \ architecture-dependent 32/64-bit word representation using arena allocation for memory management.
         - Designed a robust API interface by studying *OpenSSL* and *libtommath* libraries, and 
            implemented \ core big number algorithms such as Euclidean division and modular inverse.
     ])
