@@ -7,6 +7,7 @@
 ]
 
 #show heading.where(level: 3): set text(size: 11pt)
+
 #show link: underline
 
 #set page(
@@ -114,10 +115,10 @@
 #def_section("SKILLS & LANGUAGES", [
     #text(size: 11pt)[*Technical skills & Tools:*]
     #pad(left: list_padding)[
-        • C, C++, Python, Java, OOP, and Data structures \
-        • GNU/Linux, Bash, and docker \ 
-        • Basic understanding of TCP/IP Protocols Suite \ 
-        • Git, GitHub, vim, and tmux \
+        - C, C++, Python, Java, OOP, and Data structures \
+        - GNU/Linux, Bash, and docker \ 
+        - Basic understanding of TCP/IP Protocols Suite \ 
+        - Git, GitHub, vim, and tmux \
     ]
 
     #text(size: 11pt)[*Languages:*]
