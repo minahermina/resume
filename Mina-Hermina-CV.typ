@@ -7,6 +7,7 @@
 ]
 
 #show heading.where(level: 3): set text(size: 11pt)
+#show heading.where(level: 2): set text(size: 12pt)
 
 #show link: underline
 
@@ -16,7 +17,6 @@
 )
 
 #set text(
-    font: "Crimson Text",
     size: 10pt,
 )
 
@@ -103,7 +103,7 @@
         stroke: none,
         align: (left, right),
         [*IEEE Cairo University Student Branch*],
-        [*March 2024 -- June 2024*]
+        [*March 2024 - June 2024*]
     )
     Networks Instructor
     #pad(left: list_padding)[
@@ -132,7 +132,7 @@
 
     #def_project("BigNum",
         url: "https://github.com/minahermina/BigNum.git", 
-        date: "April 2025 – June 2025", 
+        date: "April 2025 - June 2025", 
         [
         - Developed a C99 arbitrary-precision arithmetic library for cryptographic applications,  with 
           \ architecture-dependent 32/64-bit word representation using arena allocation for memory management.
@@ -142,7 +142,7 @@
 
     #def_project("Arena Allocator",
         url: "https://github.com/minahermina/arena-allocator-in-C.git", 
-        date: "February 2025 – March 2025", 
+        date: "February 2025 - March 2025", 
         [
         - Implemented a custom single-header *thread safe* region-based memory allocator in C using *mmap*, following 
           \ the *stb-style headers*.
