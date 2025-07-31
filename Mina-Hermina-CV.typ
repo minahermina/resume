@@ -17,7 +17,7 @@
 )
 
 #set text(
-    size: 10pt,
+    size: 10.4pt,
 )
 
 #set par(
@@ -106,6 +106,7 @@
             #contact_info.phone
 
         ]
+
         // Country
         #text(size: 11.5pt, style: "italic")[
             #contact_info.country
