@@ -70,6 +70,7 @@
 #let contact_info = (
     name:     "Mina Albert Saeed Hermina",
     mail:     "mina.albert.saeed@gmail.com",
+    phone:     "+201272937424",
     linkedin: "minaalbert",
     github:   "minahermina",
     country:  "Egypt",
@@ -77,11 +78,39 @@
 
 #let def_header() = {
     text(size: 17pt, weight: "bold")[#contact_info.name]
+    v(vert_margin)
     align(left)[
-        #link("mailto:" + contact_info.mail)[#contact_info.mail] \
-        #link("https://www.linkedin.com/in/" + contact_info.linkedin)[linkedin.com/in/#contact_info.linkedin] \
-        #link("https://github.com/" + contact_info.github)[github.com/in/#contact_info.github] \
-        #contact_info.country
+        // Email
+        #link("mailto:" + contact_info.mail)[
+            #text(size: 11.5pt, style: "italic")[
+                #contact_info.mail
+            ]
+        ] \ 
+
+        // Linkedin
+        #link("https://www.linkedin.com/in/" + contact_info.linkedin)[
+            #text(size: 11.5pt, style: "italic")[
+                linkedin.com/in/#contact_info.linkedin
+            ]
+        ]  \
+
+        // Github
+        #link("https://github.com/" + contact_info.github)[
+            #text(size: 11.5pt, style: "italic")[
+                github.com/in/#contact_info.github
+            ]
+        ] \
+
+        // Phone
+        #text(size: 11.5pt, style: "italic")[
+            #contact_info.phone
+
+        ] \
+
+        // Country
+        #text(size: 11.5pt, style: "italic")[
+            #contact_info.country
+        ] \
         #v(vert_margin)
     ]
 }
