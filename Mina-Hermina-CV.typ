@@ -105,12 +105,11 @@
         #text(size: 11.5pt, style: "italic")[
             #contact_info.phone
 
-        ] \
-
+        ]
         // Country
         #text(size: 11.5pt, style: "italic")[
             #contact_info.country
-        ] \
+        ]
         #v(vert_margin)
     ]
 }
