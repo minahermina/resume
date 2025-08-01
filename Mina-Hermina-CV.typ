@@ -205,7 +205,7 @@
         stroke: none,
         align: (left, right),
         [Faculty of Computers and Artificial Intelligence at Cairo university.],
-        [*October 2021 - Present*]
+        [*October 2021 - August 2025*]
     )
     #pad(left: list_padding)[
         - Bachelor's Degree in Information Technology
