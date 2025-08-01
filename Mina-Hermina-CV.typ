@@ -26,10 +26,10 @@
 )
 
 #set document(
-  title: "Mina Hermina's CV",
-  author: "Mina Hermina",
-  keywords: ("Mina Hermina", "CV", "typst"),
-  date: datetime.today(),
+    title: "Mina Hermina's CV",
+    author: "Mina Hermina",
+    keywords: ("Mina Hermina", "CV", "typst"),
+    date: datetime.today(),
 )
 
 
@@ -119,7 +119,7 @@
 #def_header()
 
 #def_section("SUMMARY", [
-    I am a senior Computer Science student specializing in IT, with a strong passion for GNU/Linux, Unix systems,
+    I am a fresh Computer Science graduate specializing in IT, with a strong passion for GNU/Linux, Unix systems,
     and Systems Programming, and a deep interest in their evolution from inception to the present.
     I am seeking an internship in *Linux/Unix Systems Engineering or Programming* 
     to contribute my skills while gaining hands-on experience in read-world projects.
