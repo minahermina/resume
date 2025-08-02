@@ -82,33 +82,32 @@
     align(left)[
         // Email
         #link("mailto:" + contact_info.mail)[
-            #text(size: 11.5pt, style: "italic")[
+            #text(size: 11.5pt)[
                 #contact_info.mail
             ]
         ] \ 
 
         // Linkedin
         #link("https://www.linkedin.com/in/" + contact_info.linkedin)[
-            #text(size: 11.5pt, style: "italic")[
+            #text(size: 11.5pt)[
                 linkedin.com/in/#contact_info.linkedin
             ]
         ]  \
 
         // Github
         #link("https://github.com/" + contact_info.github)[
-            #text(size: 11.5pt, style: "italic")[
+            #text(size: 11.5pt)[
                 github.com/in/#contact_info.github
             ]
         ] \
 
         // Phone
-        #text(size: 11.5pt, style: "italic")[
+        #text(size: 11.5pt)[
             #contact_info.phone
-
-        ]
+        ] \
 
         // Country
-        #text(size: 11.5pt, style: "italic")[
+        #text(size: 11.5pt)[
             #contact_info.country
         ]
         #v(vert_margin)
