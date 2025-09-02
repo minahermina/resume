@@ -13,7 +13,7 @@
 
 #set page(
     paper: "a4",
-    margin: (top: 0.4in, bottom: 0.4in, left: 0.4in, right: 0.4in),
+    margin: (top: 0.3in, bottom: 0.4in, left: 0.4in, right: 0.4in),
 )
 
 #set text(
@@ -121,7 +121,8 @@
     I am a fresh Computer Science graduate specializing in IT, with a strong passion for GNU/Linux, Unix systems,
     and Systems Programming, and a deep interest in their evolution from inception to the present.
     I am seeking an internship in *Linux/Unix Systems Engineering or Programming* 
-    to contribute my skills while gaining hands-on experience in read-world projects.
+    to contribute my skills while gaining hands-on experience in real-world projects.
+    Available for immediate employment, as I am *exempted from mandatory military service*
 ])
 
 #def_section("EXTRACURRICULARS",[
@@ -182,7 +183,7 @@
         url: "https://github.com/minahermina/imglib.git", 
         date: "November 2024 - January 2025", [
         - Developed a lightweight, portable C library for image manipulation on Unix-like systems.
-        - Followed the Suckless C coding style and wrote a portable Makefile, avoiding GNU-specific extensions.
+        - Followed the *Suckless* C coding style and wrote a portable Makefile, avoiding GNU-specific extensions.
         - Implemented robust error handling system inspired by *ffmpeg* and stride-based indexing for efficient pixel access.
         ]
     )
@@ -214,8 +215,8 @@
 
 #def_section("CERTIFICATES", [
     #pad(left: list_padding)[
-        - CCNA: Introduction to Networks #h(1fr) *July 2024 -- August 2024*
-        - CCNA: Switching, Routing, and Wireless Essentials #h(1fr) *July 2024 -- August 2024*
+        - CCNA: Introduction to Networks #h(1fr) *July 2024 - August 2024*
+        - CCNA: Switching, Routing, and Wireless Essentials #h(1fr) *July 2024 - August 2024*
     ]
 
 ])
