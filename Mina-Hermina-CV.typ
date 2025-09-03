@@ -13,7 +13,7 @@
 
 #set page(
     paper: "a4",
-    margin: (top: 0.3in, bottom: 0.4in, left: 0.4in, right: 0.4in),
+    margin: (top: 0.4in, bottom: 0.4in, left: 0.4in, right: 0.4in),
 )
 
 #set text(
@@ -205,8 +205,8 @@
         - *Unikraft*: 
             - Fixed documentation issues in the main *README* and *sub-READMEs* in examples directory for 
               #link("https://github.com/unikraft/catalog")[*unikraft/catalog*] repo 
-              #link("https://github.com/unikraft/catalog/pull/231")[[#text(fill: blue, size: 12pt)[_\#231_]]]
-              #link("https://github.com/unikraft/catalog/pull/232")[[#text(fill: blue, size: 12pt)[_\#232_]]]
+              #link("https://github.com/unikraft/catalog/pull/231")[[#text(fill: blue, size: 12pt)[\#231]]]
+              #link("https://github.com/unikraft/catalog/pull/232")[[#text(fill: blue, size: 12pt)[\#232]]]
     ]
 ])
 #pagebreak()
