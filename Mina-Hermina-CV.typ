@@ -198,6 +198,18 @@
 
 ])
 
+
+
+#def_section("CONTRIBUTIONS", [
+    #pad(left: list_padding)[
+        - *Unikraft*: 
+            - Fixed documentation issues in the main *README* and *sub-READMEs* in examples directory for 
+              #link("https://github.com/unikraft/catalog")[*unikraft/catalog*] repo 
+              #link("https://github.com/unikraft/catalog/pull/231")[[#text(fill: blue, size: 12pt)[_\#231_]]]
+              #link("https://github.com/unikraft/catalog/pull/232")[[#text(fill: blue, size: 12pt)[_\#232_]]]
+    ]
+])
+#pagebreak()
 #def_section("EDUCATION", [
     #table(
         columns: (1fr, auto),
@@ -215,8 +227,7 @@
 
 #def_section("CERTIFICATES", [
     #pad(left: list_padding)[
-        - CCNA: Introduction to Networks #h(1fr) *July 2024 - August 2024*
-        - CCNA: Switching, Routing, and Wireless Essentials #h(1fr) *July 2024 - August 2024*
+        - #link("https://www.credly.com/badges/348369ba-4e30-4bc8-9b64-f110aed55fce/")[CCNA]: Introduction to Networks #h(1fr) *July 2024 - August 2024*
+        - #link("https://www.credly.com/badges/3420bc66-4053-4f97-accc-7f95e1b8979f/linked_in_profile")[CCNA]: Switching, Routing, and Wireless Essentials #h(1fr) *July 2024 - August 2024*
     ]
-
 ])
