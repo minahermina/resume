@@ -70,7 +70,7 @@
 #let contact_info = (
     name:     "Mina Albert Saeed Hermina",
     mail:     "mina.albert.saeed@gmail.com",
-    phone:     "+201272937424",
+    phone:     "+201030327762",
     linkedin: "minaalbert",
     github:   "minahermina",
     country:  "Egypt",
@@ -120,7 +120,7 @@
 #def_section("SUMMARY", [
     I am a fresh Computer Science graduate specializing in IT, with a strong passion for GNU/Linux, Unix systems,
     and Systems Programming, and a deep interest in their evolution from inception to the present.
-    I am seeking an internship in *Linux/Unix Systems Engineering or Programming* 
+    I am seeking a role in *Linux/Unix Systems Engineering or Programming* 
     to contribute my skills while gaining hands-on experience in real-world projects.
     Available for immediate employment, as I am *exempted from mandatory military service*
 ])
