@@ -10,6 +10,7 @@
 #show heading.where(level: 2): set text(size: 12pt)
 
 #show link: underline
+#set list(spacing: 1em)
 
 #set page(
     paper: "a4",
@@ -58,6 +59,21 @@
             } else {
                 name
             }) #text(rgb(64, 64, 64), style: "italic")[#languages]
+        ], [*#date*])
+
+    pad(left: list_padding)[
+        #content
+    ]
+    v(vert_margin)
+}
+
+#let def_experience(title, company, date, content) = {
+    table(
+        columns: (1fr, auto),
+        inset: 0pt,
+        stroke: none,
+        align: (left, right),
+           [#heading(level: 3, title) #text(rgb(64, 64, 64), style: "italic", weight: "bold", size: 12pt)[#company]
         ], [*#date*])
 
     pad(left: list_padding)[
@@ -118,27 +134,23 @@
 #def_header()
 
 #def_section("SUMMARY", [
-    I am a fresh Computer Science graduate specializing in IT, with a strong passion for GNU/Linux, Unix systems,
+    I am a Software Engineer, with a strong passion for GNU/Linux, Unix systems,
     and Systems Programming, and a deep interest in their evolution from inception to the present.
     I am seeking a role in *Linux/Unix Systems Engineering or Programming* 
     to contribute my skills while gaining hands-on experience in real-world projects.
-    Available for immediate employment, as I am *exempted from mandatory military service*
 ])
 
-#def_section("EXTRACURRICULARS",[
-    #table(
-        columns: (1fr, auto),
-        inset: 0pt,
-        stroke: none,
-        align: (left, right),
-        [*IEEE Cairo University Student Branch*],
-        [*March 2024 - June 2024*]
-    )
-    Networks Instructor
-    #pad(left: list_padding)[
-        - Contributing to the development of technical content for the committee sessions and 
-          \ instructing real sessions for network committee members
-    ]
+#def_section("EXPERIENCE", [
+    #def_experience("Platform Software Engineer",
+        "Sonnen GmbH", 
+        "December 2025 - Now", 
+        [
+        - Migrated multiple legacy cron jobs to *systemd* services and timers across sonnen's embedded Linux system, 
+          that integrate properly into *dpkg* lifecycle hooks, which improves logging and troubleshooting and centralizes the system management from systemd.
+        - Improved various *NetworkManager dispatcher scripts* to properly update and configure the system with *exponential backoff strategy*.
+        - Implemented a *SoftAP* feature on sonnen’s embedded Linux, bringing up a virtual access point over WiFi by orchestrating interface setup, 
+          dynamic config rendering for *hostapd* and *dnsmasq*, and iptables firewall rules — all managed through systemd units and a CLI tool.
+    ])
 ])
 
 #def_section("SKILLS & LANGUAGES", [
@@ -146,7 +158,7 @@
     #pad(left: list_padding)[
         - C, C++, Python, Java, OOP, and Data structures \
         - GNU/Linux, Bash, and docker \ 
-        - Basic understanding of TCP/IP Protocols Suite \ 
+        - Linux Network\ 
         - Git, GitHub, vim, and tmux \
     ]
 
@@ -159,25 +171,25 @@
 
 #def_section("PROJECTS", [
 
+    #def_project("c-toolkit",
+        url: "https://github.com/minahermina/c-toolkit.git", 
+        date: "July 2025 - September 2025", 
+        [
+        - Developed reusable C99-based utilities, including:
+            - *Arena allocator*:  Developed thread-safe, region-based, and page-aligned memory allocator using *mmap*
+            - *String*: Developed String utilities inspired by *Glib* from *Gnome Project*
+    ])
+
     #def_project("BigNum",
         url: "https://github.com/minahermina/BigNum.git", 
         date: "April 2025 - June 2025", 
         [
-        - Developed a C99 arbitrary-precision arithmetic library for cryptographic applications,  with 
+        - Developed a C99 arbitrary-precision arithmetic library for cryptographic applications with 
           \ architecture-dependent 32/64-bit word representation using arena allocation for memory management.
-        - Designed a robust API interface by studying *OpenSSL* and *libtommath* libraries, and 
+        - Designed a robust API by exploring *OpenSSL* and *libtommath* libraries, and 
            implemented \ core big number algorithms such as Euclidean division and modular inverse.
     ])
 
-    #def_project("Arena Allocator",
-        url: "https://github.com/minahermina/arena-allocator-in-C.git", 
-        date: "February 2025 - March 2025", 
-        [
-        - Implemented a custom single-header *thread safe* region-based memory allocator in C using *mmap*, following 
-          \ the *stb-style headers*.
-        - Designed an efficient memory management system with features including *page-aligned* allocations, 
-          \ and memory usage tracking.
-    ])
 
     #def_project("imglib",
         url: "https://github.com/minahermina/imglib.git", 
@@ -193,30 +205,30 @@
         date: "April 2024", 
         [
         - Configured and built the Linux kernel to enable lockdep module which helps in debugging 
-          \ deadlocks  in kernel space, replacing the new custom kernel into my system and using it.
+          \ deadlocks in kernel space, then booteD into the custom kernel to verify lockdep functionality.
     ])
 
 ])
 
-
+#pagebreak()
 
 #def_section("CONTRIBUTIONS", [
     #pad(left: list_padding)[
         - *Unikraft*: 
-            - Fixed documentation issues in the main *README* and *sub-READMEs* in examples directory for 
+            - Fixed documentation issues in the main *README* and *sub-READMEs* in the examples directory for 
               #link("https://github.com/unikraft/catalog")[*unikraft/catalog*] repo 
               #link("https://github.com/unikraft/catalog/pull/231")[[#text(fill: blue, size: 12pt)[\#231]]]
               #link("https://github.com/unikraft/catalog/pull/232")[[#text(fill: blue, size: 12pt)[\#232]]]
     ]
 ])
-#pagebreak()
+
 #def_section("EDUCATION", [
     #table(
         columns: (1fr, auto),
         inset: 0pt,
         stroke: none,
         align: (left, right),
-        [Faculty of Computers and Artificial Intelligence at Cairo university.],
+        [Faculty of Computers and Artificial Intelligence at Cairo University.],
         [*October 2021 - August 2025*]
     )
     #pad(left: list_padding)[
@@ -229,5 +241,21 @@
     #pad(left: list_padding)[
         - #link("https://www.credly.com/badges/348369ba-4e30-4bc8-9b64-f110aed55fce/")[CCNA]: Introduction to Networks #h(1fr) *July 2024 - August 2024*
         - #link("https://www.credly.com/badges/3420bc66-4053-4f97-accc-7f95e1b8979f/linked_in_profile")[CCNA]: Switching, Routing, and Wireless Essentials #h(1fr) *July 2024 - August 2024*
+    ]
+])
+
+#def_section("EXTRACURRICULARS",[
+    #table(
+        columns: (1fr, auto),
+        inset: 0pt,
+        stroke: none,
+        align: (left, right),
+        [*IEEE Cairo University Student Branch*],
+        [*March 2024 - June 2024*]
+    )
+    Networks Instructor
+    #pad(left: list_padding)[
+        - Contributed to the development of technical content for the committee sessions and 
+          \ instructed real sessions for network committee members
     ]
 ])
