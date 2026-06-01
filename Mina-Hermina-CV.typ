@@ -215,11 +215,15 @@
 #def_section("CONTRIBUTIONS", [
     #pad(left: list_padding)[
         - *Unikraft*: 
-            - Fixed documentation issues in the main *README* and *sub-READMEs* in the examples directory for 
+            - Fixed broken documentation links in the main *README* and *sub-READMEs* in the examples directory for 
               #link("https://github.com/unikraft/catalog")[*unikraft/catalog*] repo 
               #link("https://github.com/unikraft/catalog/pull/231")[[#text(fill: blue, size: 12pt)[\#231]]]
               #link("https://github.com/unikraft/catalog/pull/232")[[#text(fill: blue, size: 12pt)[\#232]]]
-    ]
+            - Fixed a typo in in the *ukallocregion* library's *allocregion_posix_memalign* function
+              #link("https://github.com/unikraft/unikraft/pull/1708/")[[#text(fill: blue, size: 12pt)[\#1708]]]
+            - Working on updating *LLVM libraries* ports (*libcxx*, *libcxxabi*, *libunwind*, *libcompiler-rt*) from version *14.0.2* to *21.1.1* 
+              in the unikraft ecosystem, involving low-level build system work with *Makefiles*, *C++*, and *C*    
+          ]
 ])
 
 #def_section("EDUCATION", [
