@@ -86,7 +86,7 @@
 #let contact_info = (
     name:     "Mina Albert Saeed Hermina",
     mail:     "mina.albert.saeed@gmail.com",
-    phone:     "+201030327762",
+    phone:     "+201055339661",
     linkedin: "minaalbert",
     github:   "minahermina",
     country:  "Egypt",
@@ -147,9 +147,13 @@
         [
         - Migrated multiple legacy cron jobs to *systemd* services and timers across sonnen's embedded Linux system, 
           that integrate properly into *dpkg* lifecycle hooks, which improves logging and troubleshooting and centralizes the system management from systemd.
-        - Improved various *NetworkManager dispatcher scripts* to properly update and configure the system with *exponential backoff strategy*.
         - Implemented a *SoftAP* feature on sonnen’s embedded Linux, bringing up a virtual access point over WiFi by orchestrating interface setup, 
           dynamic config rendering for *hostapd* and *dnsmasq*, and iptables firewall rules — all managed through systemd units and a CLI tool.
+        - Optimized device configuration synchronization by transitioning from full payload uploads to incremental JSON *PATCH* updates, utilizing local caching and diffing to significantly reduce network and database overhead.
+        - Redesigned Wi-Fi monitoring into an event-driven architecture by utilizing *NetworkManager* hooks and *hostapd_cli* action scripts to publish real-time interface state changes to an *MQTT* broker.
+        - Automated the synchronization of SoftAP and station (STA) channels on single-radio hardware by developing a *systemd* timer-based monitor and Implementing exponential backoff in *NetworkManager* dispatcher scripts.
+        - Resolved a critical fleet-wide false-offline issue by profiling the systemd boot sequence with *systemd-analyze* and modifying services, timers, and targets' definition to prevent blocking dependencies.
+        - Developed a *Wi-Fi watchdog* mechanism for the local system monitor to automatically detect and recover from USB enumeration errors, missing interfaces, Invalid configs, and driver-level crashes.
     ])
 ])
 
@@ -205,12 +209,11 @@
         date: "April 2024", 
         [
         - Configured and built the Linux kernel to enable lockdep module which helps in debugging 
-          \ deadlocks in kernel space, then booteD into the custom kernel to verify lockdep functionality.
+          \ deadlocks in kernel space, then booted into the custom kernel to verify lockdep functionality.
     ])
 
 ])
 
-#pagebreak()
 
 #def_section("CONTRIBUTIONS", [
     #pad(left: list_padding)[
@@ -219,7 +222,7 @@
               #link("https://github.com/unikraft/catalog")[*unikraft/catalog*] repo 
               #link("https://github.com/unikraft/catalog/pull/231")[[#text(fill: blue, size: 12pt)[\#231]]]
               #link("https://github.com/unikraft/catalog/pull/232")[[#text(fill: blue, size: 12pt)[\#232]]]
-            - Fixed a typo in in the *ukallocregion* library's *allocregion_posix_memalign* function
+            - Fixed a typo in the *ukallocregion* library's *allocregion_posix_memalign* function
               #link("https://github.com/unikraft/unikraft/pull/1708/")[[#text(fill: blue, size: 12pt)[\#1708]]]
             - Working on updating *LLVM libraries* ports (*libcxx*, *libcxxabi*, *libunwind*, *libcompiler-rt*) from version *14.0.2* to *21.1.1* 
               in the unikraft ecosystem, involving low-level build system work with *Makefiles*, *C++*, and *C*    
