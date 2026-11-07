@@ -147,13 +147,18 @@
         [
         - Migrated multiple legacy cron jobs to *systemd* services and timers across sonnen's embedded Linux system, 
           that integrate properly into *dpkg* lifecycle hooks, which improves logging and troubleshooting and centralizes the system management from systemd.
-        - Implemented a *SoftAP* feature on sonnen’s embedded Linux, bringing up a virtual access point over WiFi by orchestrating interface setup, 
-          dynamic config rendering for *hostapd* and *dnsmasq*, and iptables firewall rules — all managed through systemd units and a CLI tool.
-        - Optimized device configuration synchronization by transitioning from full payload uploads to incremental JSON *PATCH* updates, utilizing local caching and diffing to significantly reduce network and database overhead.
+        - Implemented *SoftAP* feature on sonnen’s embedded Linux, bringing up a virtual access point over WiFi by orchestrating interface setup, 
+          dynamic config rendering for *hostapd* and *dnsmasq*, and iptables firewall rules, all managed through systemd units and a CLI tool.
+        - Optimized device configuration synchronization by transitioning from full payload uploads to incremental JSON *PATCH* updates, utilizing 
+          local caching and diffing to significantly reduce network and database overhead by *90%*.
         - Redesigned Wi-Fi monitoring into an event-driven architecture by utilizing *NetworkManager* hooks and *hostapd_cli* action scripts to publish real-time interface state changes to an *MQTT* broker.
-        - Automated the synchronization of SoftAP and station (STA) channels on single-radio hardware by developing a *systemd* timer-based monitor and Implementing exponential backoff in *NetworkManager* dispatcher scripts.
+        - Resolved a critical *single-radio hardware* limitation by automating *SoftAP* and station (STA) channel synchronization, utilizing a 
+          custom systemd timer-based monitor and NetworkManager dispatcher scripts with *exponential backoff*.
+          Implementing exponential backoff in *NetworkManager* dispatcher scripts, that helped on resolving an hardware limitation.
         - Resolved a critical fleet-wide false-offline issue by profiling the systemd boot sequence with *systemd-analyze* and modifying services, timers, and targets' definition to prevent blocking dependencies.
         - Developed a *Wi-Fi watchdog* mechanism for the local system monitor to automatically detect and recover from USB enumeration errors, missing interfaces, Invalid configs, and driver-level crashes.
+        - Adapted a *3,000-line* legacy codebase to run simultaneously on Python *2.7* and Python *3.13* for a new platform, maintaining backward 
+          compatibility while resolving complex string *encoding/decoding* issues and replacing deprecated libraries
     ])
 ])
 
